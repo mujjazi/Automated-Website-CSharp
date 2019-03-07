@@ -16,8 +16,11 @@ namespace myApp
         {
 
 
+//Added Chrome Driver, Can be Used for FireFox, IE and Safari
  IWebDriver driver = new ChromeDriver();
  Actions actions = new Actions(driver);
+
+ //URL to access the webpage
  driver.Url = "https://www.visma.lv/";
 
 
@@ -55,10 +58,14 @@ System.Threading.Thread.Sleep(3000);
 
 driver.FindElement(By.ClassName("logo")).Click();
 
+
+//Scrolling to the Social Blog posts so that It becomes clickable
 var element = driver.FindElement(By.CssSelector("a.col-10"));
 actions.MoveToElement(element);
 element.Click();
 
+
+//handling different tabs of browser and closing each tab after verifying social links
 var tabs = driver.WindowHandles; 
 if (tabs.Count > 1) { 
     driver.SwitchTo().Window(tabs[1]); 
@@ -67,10 +74,14 @@ if (tabs.Count > 1) {
     driver.SwitchTo().Window(tabs[0]);
      }
 
+
 driver.FindElement(By.ClassName("prevent_tracking")).Click();
 
+//Verifying Social Link for Facebook
 driver.FindElement(By.PartialLinkText("Facebook")).Click();
 
+
+//handling different tabs of browser and closing each tab after verifying social links
 var tabs1 = driver.WindowHandles; 
 if (tabs1.Count > 1) { 
     driver.SwitchTo().Window(tabs1[1]); 
@@ -79,9 +90,11 @@ if (tabs1.Count > 1) {
     driver.SwitchTo().Window(tabs1[0]);
      }
 
-
+//Verifying Social Link for LinkedIn
 driver.FindElement(By.PartialLinkText("LinkedIn")).Click();
 
+
+//handling different tabs of browser and closing each tab after verifying social links
 var tabs2 = driver.WindowHandles; 
 if (tabs2.Count > 1) { 
     driver.SwitchTo().Window(tabs2[1]); 
@@ -91,10 +104,10 @@ if (tabs2.Count > 1) {
      }
 
 
-
-
+//Verifying Social Link for Blogs page
 driver.FindElement(By.PartialLinkText("Blog")).Click();
 
+//handling different tabs of browser and closing each tab after verifying social links
 var tabs3 = driver.WindowHandles; 
 if (tabs3.Count > 1) { 
     driver.SwitchTo().Window(tabs3[1]); 
@@ -103,13 +116,18 @@ if (tabs3.Count > 1) {
     driver.SwitchTo().Window(tabs3[0]);
      }     
 
+//Selecting the country chooser dropdown after scrolling to it
 var elementb = driver.FindElement(By.Id("countrychooser"));
 actions.MoveToElement(elementb);
 elementb.Click();
 
+
+//Using Select Element to access the dropdown which requires you to open and then click
 SelectElement elementc = new SelectElement( driver.FindElement(By.ClassName("countries")));
  System.Threading.Thread.Sleep(3000);
 elementc.SelectByIndex(2);
+
+//You can Assert at the end if required to confirm all scenarios
 
 //IWebElement body = driver.FindElement(By.TagName("body"));
 //Assert.IsTrue(body.Text.Contains("Paldies!"));
