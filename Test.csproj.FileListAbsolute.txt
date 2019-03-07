@@ -1,0 +1,11 @@
+/Users/mac/Desktop/Test/bin/Debug/netcoreapp2.2/Test.deps.json
+/Users/mac/Desktop/Test/bin/Debug/netcoreapp2.2/Test.runtimeconfig.json
+/Users/mac/Desktop/Test/bin/Debug/netcoreapp2.2/Test.runtimeconfig.dev.json
+/Users/mac/Desktop/Test/bin/Debug/netcoreapp2.2/Test.dll
+/Users/mac/Desktop/Test/bin/Debug/netcoreapp2.2/Test.pdb
+/Users/mac/Desktop/Test/obj/Debug/netcoreapp2.2/Test.csprojAssemblyReference.cache
+/Users/mac/Desktop/Test/obj/Debug/netcoreapp2.2/Test.csproj.CoreCompileInputs.cache
+/Users/mac/Desktop/Test/obj/Debug/netcoreapp2.2/Test.AssemblyInfoInputs.cache
+/Users/mac/Desktop/Test/obj/Debug/netcoreapp2.2/Test.AssemblyInfo.cs
+/Users/mac/Desktop/Test/obj/Debug/netcoreapp2.2/Test.dll
+/Users/mac/Desktop/Test/obj/Debug/netcoreapp2.2/Test.pdb
